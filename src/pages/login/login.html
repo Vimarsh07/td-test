@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>adminlog</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form [formGroup] = "form">
+    <div class="aloginp">
+        <ion-item class="aemail">
+          <ion-label floating>
+             Username
+          </ion-label>
+          <ion-input type="email" [(ngModel)]="email"  formControlName="Email"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item class="apass">
+          <ion-label floating>
+             Password
+          </ion-label>
+          <ion-input type="password" [(ngModel)]="pass"  formControlName="Pass"></ion-input>
+        </ion-item>
+        <br>
+        <button ion-button color="dark" outline class="login" (click)="add()"[disabled]="!form.valid"><b>Login</b></button>
+      </div>
+      </form>
+</ion-content>
